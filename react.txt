@@ -1,0 +1,50 @@
+* node.js 설치
+node -v
+npm -v
+
+
+* 리액트 프로젝트 생성
+npm init react-app (프로젝트명)
+npx create-react-app (프로젝트명)
+
+- 패키지 전역설치
+npm -g create-react-app (프로젝트명) --use-npm
+cd (프로젝트명)
+npm start
+
+- 패키지 설치 없이
+npx create-react-app (프로젝트명) --use-npm
+cd (프로젝트명)
+npm start
+
+-> index.html > index.js > App.js 순서로 로딩
+
+* 라우팅
+npm install react-router-dom@6
+
+
+* react-script 설치
+npm install -save react-scripts
+npm update
+
+<Git 명령어>
+git init 
+git add *
+git commit -m "first react project"
+git remote add origin https://github.com/y2kwolf/react-app.git
+git remote -v
+git push -u origin main
+git remote remove origin
+
+
+<npm 명령어>
+npm install gh-pages --save-dev
+npm add -dev gh-pages
+npm run build
+npm run deploy
+
+npx kill-port 3000
+
+
+<최종소스>
+https://github.com/egoing/react-2022-tutorial-src/blob/master/src/App.js
