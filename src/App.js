@@ -50,7 +50,7 @@ function Create(props){
 function Article(props){
   return <article>
     <h2>{props.title}</h2>
-    {props.body}
+    <pre>{props.body}</pre>
   </article>
 }
 
@@ -163,7 +163,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="WEB" onChangeMode={()=>{
+      <Header title="WEBSITE" onChangeMode={()=>{
         setMode('WELCOME');
       }}></Header>
       <Nav topics={topics} onChangeMode={(_id)=>{
