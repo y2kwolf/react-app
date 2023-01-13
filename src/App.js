@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Footer from './pages/Footer';
 
 // Components
 function Header(props){
@@ -76,10 +77,6 @@ function Update(props){
   </article>
 }
 
-function Delete(){
-
-}
-
 function App() {
   // const _mode = useState('WELCOME');
   // const mode = _mode[0];
@@ -96,7 +93,6 @@ function App() {
 
   let content = null;
   let contextControl = null;
-  let contextControl2 = null;
 
   if(mode === 'WELCOME'){
     content = <Article title="Welcome" body="Hello, WEB"></Article>
@@ -157,10 +153,9 @@ function App() {
       setTopics(newTopics);
       setMode('READ');
     }}></Update>
-  } else if(mode === 'DELETE'){
-    content = <Delete></Delete>
   }
 
+  // HTML문법이 아닌 JSX 문법 ex) className는 HTML의 class임
   return (
     <div className="App">
       <Header title="React Website" onChangeMode={()=>{
@@ -182,8 +177,9 @@ function App() {
         </li>
         {contextControl}
       </ul>
+      <Footer />
     </div>
-  );
+  );  
 }
 
 export default App;
