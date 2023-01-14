@@ -1,7 +1,6 @@
+import React from 'react';
 import './App.css';
 import { useState } from 'react';
-import Footer from './pages/Footer';
-
 // Components
 function Header(props){
   // console.log('props', props, props.title);
@@ -13,6 +12,7 @@ function Header(props){
   </header>
 }
 
+// Navigation Component
 function Nav(props){
   const lis = []
   for(let i=0; i<props.topics.length; i++){
@@ -31,6 +31,7 @@ function Nav(props){
   </nav>
 }
 
+// Create Component
 function Create(props){
   return <article>
     <h2>Create</h2>
@@ -47,6 +48,7 @@ function Create(props){
   </article>
 }
 
+// Article Component
 function Article(props){
   return <article>
     <h2>{props.title}</h2>
@@ -54,6 +56,7 @@ function Article(props){
   </article>
 }
 
+// Update Component
 function Update(props){
   const [title, setTitle] = useState(props.title);
   const [body, setBody] = useState(props.body);
@@ -76,6 +79,7 @@ function Update(props){
   </article>
 }
 
+// 화면 구현 Component
 function App() {
   // const _mode = useState('WELCOME');
   // const mode = _mode[0];
@@ -173,10 +177,9 @@ function App() {
             event.preventDefault();
             setMode('CREATE')
           }}>Create</a>
-        </li>
+        </li>        
         {contextControl}
       </ul>
-      <Footer />
     </div>
   );  
 }
